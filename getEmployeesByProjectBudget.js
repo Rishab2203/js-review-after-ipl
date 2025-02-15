@@ -16,7 +16,9 @@ allDivisions.forEach((division) => {
       let projects = employee["projects"];
       projects.forEach((project) => {
         if (project["budget"] > 150000) {
-          output.push(employee["name"]);
+          if (!output.includes(employee["name"])) {
+            output.push(employee["name"]);
+          }
         }
       });
     });
